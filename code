@@ -1,0 +1,73 @@
+# Define an empty list to store the grocery items
+grocery_list = []
+
+# Function to add an item to the grocery list
+def add_item(item):
+    grocery_list.append(item)
+    print(f"{item} added to the list.")
+
+# Function to remove an item from the grocery list
+def remove_item(item):
+    if item in grocery_list:
+        grocery_list.remove(item)
+        print(f"{item} removed from the list.")
+    else:
+        print(f"{item} is not in the list.")
+
+# Function to display the current grocery list
+def display_list():
+    print("Current grocery list:")
+    for item in grocery_list:
+        print(item)
+
+# Main program
+while True:
+    print("\nMenu:")
+    print("1. Add item to the list")
+    print("2. Remove item from the list")
+    print("3. Display the list")
+    print("4. Quit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == '1':
+        item = input("Enter the item to add: ")
+        add_item(item)
+    elif choice == '2':
+        item = input("Enter the item to remove: ")
+        remove_item(item)
+    elif choice == '3':
+        display_list()
+    elif choice == '4':
+        print("Exiting...")
+        break
+    else:
+        print("Invalid choice. Please try again.")
+scenerio 2
+def calculate_average(grades):candidates = ['Candidate A', 'Candidate B', 'Candidate C']
+votes = [0, 0, 0]
+
+num_voters = int(input("Enter the number of voters: "))
+for i in range(num_voters):
+    print("Candidates:")
+    for idx, candidate in enumerate(candidates):
+        print(f"{idx}: {candidate}")
+    vote = int(input("Enter the number of your chosen candidate: "))
+    if vote in range(len(candidates)):
+        votes[vote] += 1
+        print(f"Vote recorded for {candidates[vote]}.")
+    else:
+        print("Invalid candidate index. Please choose a valid candidate.")
+
+print("Voting Results:")
+for candidate, vote_count in zip(candidates, votes):
+    print(f"{candidate}: {vote_count} votes")
+
+    if word in word_frequency:
+        word_frequency[word] += 1
+    else:
+        word_frequency[word] = 1
+
+print("Word frequency:", word_frequency)
+scenerio 4
+
